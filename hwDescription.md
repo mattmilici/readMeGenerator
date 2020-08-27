@@ -20,10 +20,6 @@ SO THAT can quickly create a professional README for a new project
 
 ## Acceptance Criteria
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 WHEN I enter my project title
 THEN this is displayed as the title of the README
 WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
@@ -36,6 +32,7 @@ WHEN I enter my email address
 THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
+
 ```
 
 ## Minimum Application Requirements
@@ -105,3 +102,4 @@ You are required to submit the following:
 - A sample README.md file for a project repository generated using your application.
 
 - The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+```
