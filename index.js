@@ -12,36 +12,7 @@ function getHtmlOutput(answers) {
     const testInstructions = answers.testInstructions;
     const email = answers.email;
     const github = answers.github;
-    return `# ${title}
-
-    # Description
-    
-    ${description}
-    
-    ## Table of Contents
-    
-    ## Installation
-    
-    ${installation}
-    
-    ## Usage
-    
-    ${usage}
-    
-    ## License
-    
-    ## Contributing
-    
-    ${contribution}
-    
-    ## Tests
-    
-    ${testInstructions}
-    
-    ## Questions
-    
-    ${email}
-    ${email}`;
+    return `# ${title} \n\n## Description\n   ${description}\n\n## Table of Contents\n    - Description\n    - Installation\n    - Usage\n    - License\n    - Contributing\n    - Questions\n\n## Installation\n${installation}\n\n## Usage\n${usage}\n\n## License\n\n## Contributing\n${contribution}\n\n## Tests\n${testInstructions}\n\n## Questions\n${email}\n${email}`;
 }
 inquirer
     .prompt([{
