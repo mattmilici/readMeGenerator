@@ -46,6 +46,7 @@ THEN I am taken to the corresponding section of the README
 - The generated README includes the following sections:
 
   - Title
+  [link](/README.md#Questions)
   - Description
   - Table of Contents
   - Installation

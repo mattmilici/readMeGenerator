@@ -12,7 +12,7 @@ function getHtmlOutput(answers) {
     const testInstructions = answers.testInstructions;
     const email = answers.email;
     const github = answers.github;
-    return `# ${title} \n\n## Description\n   ${description}\n\n## Table of Contents\n    - Description\n    - Installation\n    - Usage\n    - License\n    - Contributing\n    - Questions\n\n## Installation\n${installation}\n\n## Usage\n${usage}\n\n## License\n\n## Contributing\n${contribution}\n\n## Tests\n${testInstructions}\n\n## Questions\n${email}\n${email}`;
+    return `# ${title} \n\n## Description\n   ${description}\n\n## Table of Contents\n    - Description\n    - Installation\n    - Usage\n    - License\n    - Contributing\n    - [Questions](#-questions)\n\n## Installation\n${installation}\n\n## Usage\n${usage}\n\n## License\n\n## Contributing\n${contribution}\n\n## Tests\n${testInstructions}\n\n## Questions\nMy email is: ${email}\nGithub url can be found here: ${github}`;
 }
 inquirer
     .prompt([{
