@@ -42,24 +42,36 @@ function getHtmlOutput(answers) {
 }
 inquirer
     .prompt([{
-            name: "name",
-            message: "What is your name? ",
+            name: "title",
+            message: "What is the project title?",
         },
         {
-            name: "location",
-            message: "What is your location?",
+            name: "description",
+            message: "Project Description?",
         },
         {
-            name: "bio",
-            message: "Type a short bio: ",
+            name: "installation",
+            message: "installation instructions?",
         },
         {
-            name: "githubUserName",
-            message: "What is your GitHub user name? ",
+            name: "usage",
+            message: "usage information?",
         },
         {
-            name: "linkedinUserName",
-            message: "What is your LinkedIn user name? ",
+            name: "contribution",
+            message: "contribution guidelines?",
+        },
+        {
+            name: "testInstructions",
+            message: "test instructions?",
+        },
+        {
+            name: "email",
+            message: "What is your email?",
+        },
+        {
+            name: "github",
+            message: "what is Github Account?",
         },
     ])
     .then(function(answers) {
@@ -74,3 +86,13 @@ inquirer
     .catch(function(error) {
         console.log("Oh noes! An error!", error);
     });
+
+// WHEN I choose a license for my application from a list of options
+// THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+// WHEN I enter my GitHub username
+// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+// WHEN I enter my email address
+// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+// WHEN I click on the links in the Table of Contents
+// THEN I am taken to the corresponding section of the README
+// ```

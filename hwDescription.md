@@ -1,112 +1,107 @@
-# Unit 09: Node.js and ES6+
+# Unit 09 Node.js and ES6+ Homework: Good README Generator
 
-## Overview
+When creating an open source project on GitHub, it is important to have a quality README with information about the app--what is the app for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project. A command-line application will allow for quick and easy generation of a project README to get started quickly. This will allow a project creator to spend more time working on finishing the project and less time creating a good README.
 
-We now arrive at another important milestone in our journey. The JavaScript you wrote for your first project was executed entirely on the client side, though it used third-party server-side APIs. In this and later units, you will learn how to write your own server-side applications to handle requests and ultimately to build your own APIs.
+Your task is to create a command-line application that dynamically generates a professional README.md from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Good README guide](../../01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md) as a reminder of everything that a quality, professional README contains. The application will be invoked with the following command:
 
-In a previous era, this would be the point in our full-stack journey where we would begin learning a second programming language, such as PHP, to write server-side code. Luckily for us, Node.js—which was released in 2009—makes this unnecessary. Node.js is an implementation of the V8 JavaScript engine without Chrome, and allows us to write server-side code using JavaScript. We no longer need a browser to run JavaScript. We can (and will) do so from the command line.
+```
+node index.js
+```
 
-In this unit, you will learn how to initialize a Node.js project, install third-party dependencies, and create interactive command-line applications. Node.js ships with what is referred to as a standard library. The standard library contains a number of modules that allow us to extend the functionality of Node.js, such as `fs`, which we will use to read and write files. There is also a large and robust ecosystem of third-party modules that you will learn how to add to applications to extend their functionality.
+Because this is a command-line application that won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates the functionality of your application. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer.
 
-## Key Topics
+## User Story
 
-* Node.js
+```
+AS A developer
+I WANT a README generator
+SO THAT can quickly create a professional README for a new project
+```
 
-    * process.argv
+## Acceptance Criteria
 
-    * fs
+```md
+GIVEN a command-line application that accepts user input
+WHEN I am prompted for information about my application repository
+THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+WHEN I enter my project title
+THEN this is displayed as the title of the README
+WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+WHEN I choose a license for my application from a list of options
+THEN a badge for that license is added hear the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+WHEN I enter my GitHub username
+THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+WHEN I enter my email address
+THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+WHEN I click on the links in the Table of Contents
+THEN I am taken to the corresponding section of the README
+```
 
-* Modularization
+## Minimum Application Requirements
 
-    * require
+- Meets [Submission Requirements](#submission-requirements) in the following section.
 
-    * module.exports
+- Functional application.
 
-* npm
+- GitHub repository with a unique name and a README describing project.
 
-    * package.json
+- The generated README includes the following sections:
 
-    * npm init
+  - Title
+  - Description
+  - Table of Contents
+  - Installation
+  - Usage
+  - License
+  - Contributing
+  - Tests
+  - Questions
 
-    * node_modules
+- The generated README includes 1 badge that's specific to the repository.
 
-* Inquirer
+## Submission Requirements
 
-* ES6
+Because this is a CLI App, there will be no need to deploy it to Heroku. This time, though, you need to include a video showing us that you got the app working with no bugs. You should include a link to the video in your application's `README.md` file.
 
-    * let and const
+- Create a `.gitignore` file and include `node_modules/` and `.DS_Store/`.
 
-    * Arrow functions
+- `node_modules` is not tracked and uploaded to GitHub. (Hint: It is easy if you create your `.gitignore` file before installing dependencies with npm.)
 
-    * Template literals
+- Repo **MUST** include `package.json` with required dependencies. (Hint: Run `npm init` when you first setup the project before installing any dependencies.)
 
-    * Array methods (map, filter, reduce)
+- Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
 
-    * Spread and rest
+- Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers/other developers in the future what you built and why, and to show how it works.
 
-    * Destructuring arrays and objects
+- Because screenshots (and well-written READMEs) are extremely important in the context of GitHub, this will be part of the grading.
 
-* Asynchronous JavaScript
+## Commit Early and Often
 
-    * Callbacks
+One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
 
-    * Promises
+- Your commit history is a signal to employers that you are actively working on projects and learning new skills.
 
-    * Async/await
+- Your commit history allows you to revert your code base in the event that you need to return to a previous state.
 
-    * Fetch API
+Follow these guidelines for committing:
 
-    * Axios
- 
+- Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
 
-## Comprehension Check
+- Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
 
-You will be employer-ready if you can answer the following questions:
+- Don't commit half-done work, for the sake of your collaborators (and your future self!).
 
-1. What is npm?
+- Test your application before you commit to ensure functionality at every step in the development process.
 
-2. What are three of the major changes introduced to JavaScript in ES6?
+We would like you to have more than 200 commits by graduation, so commit early and often!
 
-3. What are three approaches to handling asynchronous JavaScript?
+## Submission on BCS
 
+You are required to submit the following:
 
-## Learning Objectives
+- A walkthrough video demonstrating the functionality of the application.
 
-You will be employer-competitive if are able to: 
+- A sample README.md file for a project repository generated using your application.
 
-* Build interactive command-line applications that process user input.
-
-* Explain modularization and how it relates to npm and the standard library.
-
-* Initialize new Node.js projects with npm, and install and import dependencies.
-
-* Explain the importance and usefulness of ES6+ concepts such as `let`, `const`, and arrow functions.
-
-* Handle asynchrony with callbacks, Promises, and async/await.
-
-* Make server-side API calls with the Fetch API and Axios.
-
-
-## Homework
-
-Create a command-line application that uses input from a user to dynamically generates a good README for a GitHub project.
-
-
-## Heads Up
-
-* Starting this unit, you will begin to use Node.js. Be sure to have it installed on your computer **before** attending your classes. You can follow the installation instructions for [Mac](./04-Supplemental/nodejs-install-mac.md) and [Windows](./04-Supplemental/nodejs-install-win.md) computers.  
-
-## Helpful Links
-
-* [Wikipedia: Node.js](https://en.wikipedia.org/wiki/Node.js)
-
-* [Wikipedia: V8](https://en.wikipedia.org/wiki/Chrome_V8)
-
-* [Wikipedia: Server](https://en.wikipedia.org/wiki/Server_(computing))
-
-* [fs Documentation](https://node.readthedocs.io/en/latest/api/fs/)
-
-* [InquirerJS](https://www.npmjs.com/package/inquirer/v/0.2.3)
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
