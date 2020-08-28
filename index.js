@@ -10,10 +10,13 @@ function getHtmlOutput(answers) {
     const usage = answers.usage;
     const contribution = answers.contribution;
     const testInstructions = answers.testInstructions;
+    const license = answers.license;
+    const licneseColor = answers.licneseColor;
     const email = answers.email;
     const github = answers.github;
-    return `# ${title} \n\n## Description\n   ${description}\n\n## Table of Contents\n* Description\n* Installation\n* Usage\n* License\n* Contributing\n* [Questions](#questions)\n\n## Installation\n${installation}\n\n## Usage\n${usage}\n\n## License\n\n## Contributing\n${contribution}\n\n## Tests\n${testInstructions}\n\n## Questions\nMy email is: ${email}\nGithub url can be found here: ${github}`;
+    return `# ${title} \n\n## Description\n${description}\n\n![${license} Badge](https://img.shields.io/badge/License-${license}-${licneseColor})\n\n## Table of Contents\n* [Description](#Description)\n* [Installation](#Installation)\n* [Usage](#Usage)\n* [License](#License)\n* [Contributing](#Contributing)\n* [Questions](#questions)\n\n## Installation\n${installation}\n\n## Usage\n${usage}\n\n## License\n\n## Contributing\n${contribution}\n\n## Tests\n${testInstructions}\n\n## Questions\nMy email is: ${email}\n\nGithub url can be found here: ${github}`;
 }
+
 inquirer
     .prompt([{
             name: "title",
@@ -22,6 +25,19 @@ inquirer
         {
             name: "description",
             message: "Project Description?",
+        },
+        {
+            type: "list",
+            name: "license",
+            choices: ["MIT", "BSD"],
+            message: "what type of license do you need (MIT, BSD, ?",
+        },
+        {
+            type: "list",
+            name: "licenseColor",
+            choices: ["blue", "red", "yellow", "orange", "green"],
+            message: "what color do you want the license to be?",
+            default: "blue",
         },
         {
             name: "installation",
@@ -60,41 +76,3 @@ inquirer
     .catch(function(error) {
         console.log("Oh noes! An error!", error);
     });
-
-// function test(answers) {
-//     const name = answers.name;
-//     const location = answers.location;
-//     const bio = answers.bio;
-//     const githubUserName = answers.githubUserName;
-//     const linkedInUserName = answers.linkedinUserName;
-//     return `<!DOCTYPE html>
-//     <html lang="en">
-//     <head>
-//         <meta charset="UTF-8">
-//         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-//         <title>Portfolio</title>
-//     </head>
-//     <body>
-//         <div class="container">
-//             <div id="basics" aria-label="Basic information">
-//                 <h3>${name}</h3>
-//                 <p>Location: ${location}</p>
-//             </div>
-//             <div id="bio" aria-labelledby="#bio-header">
-//                 <h3 id="bio-header">Bio</h3>
-//                 <p>
-//                     ${bio}
-//                 </p>
-//             </div>
-//             <div id="on-the-web" aria-labelledby="#on-the-web-header">
-//                 <h3>On The Web</h3>
-//                 <ul>
-//                     <li>Github: <a href="https://www.github.com/${githubUserName}">${githubUserName}</a></li>
-//                     <li>LinkedIn: <a href="https://www.linkedin.com/in/${linkedInUserName}/">${linkedInUserName}</a></li>
-//                 </ul>
-//             </div>
-//         </div>
-//     </body>
-//     </html>`;
-// }
