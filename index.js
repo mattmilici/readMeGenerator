@@ -14,7 +14,7 @@ function getHtmlOutput(answers) {
     const licneseColor = answers.licneseColor;
     const email = answers.email;
     const github = answers.github;
-    return `# ${title} \n\n## Description\n${description}\n\n![${license} Badge](https://img.shields.io/badge/License-${license}-${licneseColor})\n\n## Table of Contents\n* [Description](#Description)\n* [Installation](#Installation)\n* [Usage](#Usage)\n* [License](#License)\n* [Contributing](#Contributing)\n* [Questions](#questions)\n\n## Installation\n${installation}\n\n## Usage\n${usage}\n\n## License\n\n## Contributing\n${contribution}\n\n## Tests\n${testInstructions}\n\n## Questions\nMy email is: ${email}\n\nGithub url can be found here: ${github}`;
+    return `# ${title} \n\n## Description\n${description}\n\n![${license} Badge](https://img.shields.io/badge/License-${license}-${licneseColor})\n\n## Table of Contents\n* [Description](#Description)\n* [Installation](#Installation)\n* [Usage](#Usage)\n* [License](#License)\n* [Contributing](#Contributing)\n* [Questions](#questions)\n\n## Installation\n${installation}\n\n## Usage\n${usage}\n\n## License\n\n## Contributing\n${contribution}\n\n## Tests\n${testInstructions}\n\n## Questions\nMy email is: ${email}\n\nGithub url can be found here: https://github.com/${github}`;
 }
 
 inquirer

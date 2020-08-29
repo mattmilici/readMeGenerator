@@ -1,7 +1,7 @@
-# Matt Milici 
+# CLI README Generator 
 
 ## Description
-s;dfja;sldkfj;ajsdf;lkjasd; lfja;slkdfj asdl;kfj asl;dfj asdkfj /n
+The purpose of this project is to help save developers time when creating a README.md file. This project will prompt the user with specific questions that every README should have and styling it in an easy to read format with active links and badges.
 
 ![MIT Badge](https://img.shields.io/badge/License-MIT-undefined)
 
@@ -14,20 +14,20 @@ s;dfja;sldkfj;ajsdf;lkjasd; lfja;slkdfj asdl;kfj asl;dfj asdkfj /n
 * [Questions](#questions)
 
 ## Installation
-First instalsd fasdf;ks f;klasdj f;kalsdfj
+First, start by running "npm init", then run "node index.js" to begin being prompted.
 
 ## Usage
-k;ldsflasdkjf
+This project should be used at the beginning of the project in order to setup the standard README template
 
 ## License
 
 ## Contributing
-;lkjsd;flkjasd
+Please use the contact information under Questions to provide any feedback!
 
 ## Tests
-f;lkjasd;fkajsdf
+Test the project by running node index.js in your terminal. Please note, you will have to be in the correct director in order to have the README created in the correct location.
 
 ## Questions
-My email is: milici.mas;dkfj
+My email is: milici.m915@gmail.com
 
-Github url can be found here: a;sldkfjas
+Github url can be found here: mmilici-star
