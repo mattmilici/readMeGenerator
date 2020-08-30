@@ -2,9 +2,9 @@
 
 ## Description
 
-The purpose of this project is to help save developers time when creating a README.md file. This project will prompt the user with specific questions that every README should have and styling it in an easy to read format with active links and badges.
+The purpose of this project is to help save developers time when creating a README.md file. This project will prompt the user with specific questions that every README should have and styling it in an easy to read format with active links and badges.
 
-![MIT Badge](https://img.shields.io/badge/License-MIT-undefined)
+![BSD Badge](https://img.shields.io/badge/License-BSD-undefined)
 
 ## Table of Contents
 
@@ -18,6 +18,8 @@ The purpose of this project is to help save developers time when creating a READ
 ## Installation
 
 First, start by running "npm init", then run "node index.js" to begin being prompted.
+
+![image of how to use terminal](img.png)
 
 ## Usage
 
@@ -35,6 +37,8 @@ Test the project by running node index.js in your terminal. Please note, you wil
 
 ## Questions
 
-My email is: milici.m915@gmail.com
+My email is: test@gmail.com
 
-[Go to the GitHub Web Site](https://github.com/mmilici-star)
+[Go to the GitHub Web Site](https://github.com/test-mar)
+
+<!-- https://drive.google.com/file/d/1uaq30j4oUvyC_qzXMb5q9VFOQhwjRacS/view -->
